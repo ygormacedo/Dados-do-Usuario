@@ -68,7 +68,7 @@
 
                 />
 
-            <Spinner
+            <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/escolaId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
 
                 />
 
-            <Spinner
+            <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/estadosId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                 android:layout_below="@id/estadosId"
                 android:layout_margin="@dimen/margin_default"
                 android:hint="@string/sayPassword"
-                android:password="true"
+                android:inputType="textPassword"
 
                 />
 
@@ -129,6 +129,7 @@
                 android:layout_below="@id/password"
                 android:layout_margin="@dimen/margin_default"
                 android:hint="@string/tryPassword"
+                android:inputType="textPassword"
 
                 />
 
