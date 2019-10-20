@@ -138,6 +138,9 @@
                 android:hint="@string/sendForms"
                 android:layout_below="@id/confirmationPassword"
                 android:layout_margin="@dimen/margin_default"
+                android:textColorHint="@android:color/white"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
                 />
 
         </RelativeLayout>
