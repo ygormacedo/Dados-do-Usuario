@@ -16,17 +16,16 @@
             android:layout_height="wrap_content"
             >
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/firstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:hint="@string/sayName"
                 android:inputType="textPersonName"
-                tools:ignore="Autofill"
                 />
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/lastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,11 +33,10 @@
                 android:hint="@string/sayLastName"
                 android:layout_below="@id/firstName"
                 android:inputType="textPersonName"
-                tools:ignore="Autofill"
 
                 />
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/telephoneId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,21 +44,30 @@
                 android:layout_below="@id/lastName"
                 android:hint="@string/editTelephone"
                 android:inputType="number"
-                tools:ignore="Autofill"
 
                 />
-
-            <EditText
-                android:id="@+id/cpfId"
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/celularId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:layout_below="@id/telephoneId"
-                android:hint="@string/cpfNumber"
+                android:hint="@string/telId"
                 android:inputType="number"
-                tools:ignore="Autofill"
 
                 />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/cpfId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:layout_below="@id/celularId"
+                android:hint="@string/cpfNumber"
+                android:inputType="number"
+
+                />
+
             <Spinner
                 android:id="@+id/escolaId"
                 android:layout_width="match_parent"
@@ -71,14 +78,66 @@
 
 
                 />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/enderecoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/escolaId"
+                android:hint="@string/endereco"
+                android:inputType="textPersonName"
+                android:layout_margin="@dimen/margin_default"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/bairroId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enderecoId"
+                android:hint="@string/bairro"
+                android:inputType="textPersonName"
+                android:layout_margin="@dimen/margin_default"
+
+                />
+
             <Spinner
                 android:id="@+id/estadosId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:background="@android:drawable/btn_dropdown"
-                android:layout_below="@id/escolaId"
+                android:layout_below="@id/bairroId"
 
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/estadosId"
+                android:layout_margin="@dimen/margin_default"
+                android:hint="@string/sayPassword"
+                android:password="true"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/confirmationPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password"
+                android:layout_margin="@dimen/margin_default"
+                android:hint="@string/tryPassword"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/sendForms"
+                android:layout_below="@id/confirmationPassword"
+                android:layout_margin="@dimen/margin_default"
                 />
 
         </RelativeLayout>

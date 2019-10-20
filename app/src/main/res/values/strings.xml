@@ -41,4 +41,10 @@
     <string name="sayLastName">Digite seu sobrenome</string>
     <string name="editTelephone">Digite seu telefone</string>
     <string name="cpfNumber">Digite seu CPF</string>
+    <string name="endereco">Digite seu Endereço</string>
+    <string name="bairro">Digite o nome do seu bairro</string>
+    <string name="sayPassword">Digite sua senha</string>
+    <string name="telId">Digite o número do seu celular</string>
+    <string name="tryPassword">Digite novamente sua senha</string>
+    <string name="sendForms">Enviar</string>
 </resources>
