@@ -45,7 +45,7 @@
                 android:layout_margin="@dimen/margin_default"
                 android:layout_below="@id/lastName"
                 android:hint="@string/editTelephone"
-                android:inputType="phone"
+                android:inputType="number"
                 tools:ignore="Autofill"
 
                 />
@@ -60,10 +60,26 @@
                 android:inputType="number"
                 tools:ignore="Autofill"
 
+                />
+            <Spinner
+                android:id="@+id/escolaId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_below="@id/cpfId"
+
 
                 />
+            <Spinner
+                android:id="@+id/estadosId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_below="@id/escolaId"
 
-
+                />
 
         </RelativeLayout>
     </ScrollView>

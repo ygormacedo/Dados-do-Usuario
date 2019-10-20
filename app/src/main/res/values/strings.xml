@@ -1,5 +1,42 @@
 <resources>
     <string name="app_name">DadosDoUsuario</string>
+    <string-array name="estados_array">
+        <item> AC: Acre</item>
+        <item> AL: Alagoas</item>
+        <item>AP: Amapá </item>
+        <item> AM: Amazonas </item>
+        <item> BA: Bahia </item>
+        <item> CE: Ceará </item>
+        <item> DF: Distrito Federal </item>
+        <item> ES: Espirito Santo </item>
+        <item> GO: Goiás </item>
+        <item> MA: Maranhão </item>
+        <item> MT: Mato Grosso </item>
+        <item> MS: Mato Grosso do Sul</item>
+        <item> MG: Minas Gerais </item>
+        <item> PA: Pará </item>
+        <item> PB: Paraíba </item>
+        <item> PR: Paraná </item>
+        <item> PE: Pernambuco </item>
+        <item> PI: Piaui </item>
+        <item> RJ: Rio de Janeiro </item>
+        <item> RN: Rio Grande do Norte </item>
+        <item> RS: Rio Grande do Sul </item>
+        <item> RO: Rondônia </item>
+        <item> RR: Roraima </item>
+        <item> SC: Santa Cantarina </item>
+        <item> SP: São Paulo </item>
+        <item> SE: Sergipe </item>
+        <item> TO: Tocantins</item>
+    </string-array>
+    <string-array name="escolaridade_array">
+        <item> Ensino Fundamental Incompleto </item>
+        <item> Ensino Fundamental Completo </item>
+        <item> Ensino Médio Incompleto </item>
+        <item> Ensino Médio Completo </item>
+        <item> Ensino Superior Incompleto </item>
+        <item> Ensino Superior Completo </item>
+    </string-array>
     <string name="sayName">Digite seu nome</string>
     <string name="sayLastName">Digite seu sobrenome</string>
     <string name="editTelephone">Digite seu telefone</string>
