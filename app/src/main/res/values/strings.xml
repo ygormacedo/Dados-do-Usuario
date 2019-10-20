@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DadosDoUsuario</string>
+    <string name="sayName">Digite seu nome</string>
+    <string name="sayLastName">Digite seu sobrenome</string>
+    <string name="editTelephone">Digite seu telefone</string>
+    <string name="cpfNumber">Digite seu CPF</string>
+</resources>
