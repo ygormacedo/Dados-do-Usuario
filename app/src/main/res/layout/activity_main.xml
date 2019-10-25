@@ -1,149 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
+    android:background="@color/zupColorBlue"
     >
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         >
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ib_main_zup"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:background="@drawable/zupin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:textColorHint="@android:color/white"
+            android:hint="@string/sayName"
+            android:inputType="textPersonName"
+            android:layout_margin="@dimen/margin_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ib_main_zup"
+            android:background="@drawable/button_custom"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:layout_margin="@dimen/margin_default"
+            android:hint="@string/sayLastName"
+            android:textColorHint="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/et_main_name"
+            android:background="@drawable/button_custom"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:layout_margin="@dimen/margin_default"
+            android:hint="@string/editTelephone"
+            android:textColorHint="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/et_main_last_name"
+            android:background="@drawable/button_custom"
+            android:inputType="number"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_celular"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:layout_margin="@dimen/margin_default"
+            app:layout_constraintTop_toBottomOf="@id/et_main_telephone"
+            android:background="@drawable/button_custom"
+            android:textColorHint="@android:color/white"
+            android:hint="@string/telId"
+            android:inputType="number"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:layout_margin="@dimen/margin_default"
+            app:layout_constraintTop_toBottomOf="@id/et_main_celular"
+            android:background="@drawable/button_custom"
+            android:hint="@string/cpfNumber"
+            android:textColorHint="@android:color/white"
+            android:inputType="number"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spi_main_school"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:layout_margin="@dimen/margin_default"
+            app:layout_constraintTop_toBottomOf="@id/et_main_cpf"
+            android:background="@drawable/button_custom"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/text_default"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_zipCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:layout_margin="@dimen/margin_default"
+            android:background="@drawable/button_custom"
+            app:layout_constraintTop_toBottomOf="@+id/spi_main_school"
+            android:hint="@string/endereco"
+            android:inputType="textPersonName"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_neighborhood"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:hint="@string/bairro"
+            app:layout_constraintTop_toBottomOf="@id/et_main_zipCode"
+            android:background="@drawable/button_custom"
+            android:inputType="textPersonName"
+            android:layout_margin="@dimen/margin_default"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spi_main_stats"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            android:layout_margin="@dimen/margin_default"
+            app:layout_constraintTop_toBottomOf="@id/et_main_neighborhood"
+            android:background="@drawable/button_custom"
+            android:textSize="50sp"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            app:layout_constraintTop_toBottomOf="@id/spi_main_stats"
+            android:background="@drawable/button_custom"
+            android:layout_margin="@dimen/margin_default"
+            android:hint="@string/sayPassword"
+            android:textColorHint="@android:color/white"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            app:layout_constraintTop_toBottomOf="@id/et_main_password"
+            android:background="@drawable/button_custom"
+            android:layout_margin="@dimen/margin_default"
+            android:hint="@string/tryPassword"
+            android:textColorHint="@android:color/white"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_default"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:hint="@string/sendForms"
+            android:layout_margin="@dimen/margin_default"
+            android:textColorHint="@android:color/white"
+            android:background="@drawable/button_custom"
+            app:layout_constraintTop_toBottomOf="@id/et_main_confirm_password"
+            android:textSize="@dimen/text_default"
+            />
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/firstName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:hint="@string/sayName"
-                android:inputType="textPersonName"
-                />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/lastName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:hint="@string/sayLastName"
-                android:layout_below="@id/firstName"
-                android:inputType="textPersonName"
-
-                />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/telephoneId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:layout_below="@id/lastName"
-                android:hint="@string/editTelephone"
-                android:inputType="number"
-
-                />
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/celularId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:layout_below="@id/telephoneId"
-                android:hint="@string/telId"
-                android:inputType="number"
-
-                />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/cpfId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:layout_below="@id/celularId"
-                android:hint="@string/cpfNumber"
-                android:inputType="number"
-
-                />
-
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/escolaId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:layout_below="@id/cpfId"
-
-
-                />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/enderecoId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/escolaId"
-                android:hint="@string/endereco"
-                android:inputType="textPersonName"
-                android:layout_margin="@dimen/margin_default"
-
-                />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/bairroId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/enderecoId"
-                android:hint="@string/bairro"
-                android:inputType="textPersonName"
-                android:layout_margin="@dimen/margin_default"
-
-                />
-
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/estadosId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:layout_below="@id/bairroId"
-
-                />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/estadosId"
-                android:layout_margin="@dimen/margin_default"
-                android:hint="@string/sayPassword"
-                android:inputType="textPassword"
-
-                />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/confirmationPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/password"
-                android:layout_margin="@dimen/margin_default"
-                android:hint="@string/tryPassword"
-                android:inputType="textPassword"
-
-                />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="@string/sendForms"
-                android:layout_below="@id/confirmationPassword"
-                android:layout_margin="@dimen/margin_default"
-                android:textColorHint="@android:color/white"
-                android:background="@color/colorPrimary"
-                android:textSize="20sp"
-                />
-
-        </RelativeLayout>
-    </ScrollView>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
