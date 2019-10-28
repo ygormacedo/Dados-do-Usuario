@@ -47,4 +47,5 @@
     <string name="telId">Digite o número do seu celular</string>
     <string name="tryPassword">Digite novamente sua senha</string>
     <string name="sendForms">Enviar</string>
+    <string name="txt_cancel">Cancelar</string>
 </resources>

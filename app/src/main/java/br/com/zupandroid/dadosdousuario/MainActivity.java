@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         spinnerDropDown();
+        buttonsClick();
     }
 
     private void spinnerDropDown() {
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
                         android.R.layout.simple_spinner_item);
         staticAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         schoolDinamic.setAdapter(staticAdapter);
+    }
+
+    public void buttonsClick(){
 
     }
 }

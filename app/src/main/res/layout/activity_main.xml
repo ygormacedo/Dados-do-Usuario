@@ -16,8 +16,9 @@
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/ib_main_zup"
             android:layout_width="wrap_content"
+            android:layout_margin="@dimen/margin_default"
             android:layout_height="match_parent"
-            android:background="@drawable/zupin"
+            android:background="@drawable/zupin1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -195,15 +196,29 @@
             />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:hint="@string/sendForms"
             android:layout_margin="@dimen/margin_default"
             android:textColorHint="@android:color/white"
             android:background="@drawable/button_custom"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_main_confirm_password"
             android:textSize="@dimen/text_default"
             />
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:hint="Limpar"
+             android:layout_margin="@dimen/margin_default"
+             android:textColorHint="@android:color/white"
+             android:background="@drawable/button_custom"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/et_main_confirm_password"
+             android:textSize="20sp"
+
+             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
