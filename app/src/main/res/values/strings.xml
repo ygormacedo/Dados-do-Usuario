@@ -48,4 +48,5 @@
     <string name="tryPassword">Digite novamente sua senha</string>
     <string name="sendForms">Enviar</string>
     <string name="txt_cancel">Cancelar</string>
+    <string name="txt_clear">Limpar</string>
 </resources>
