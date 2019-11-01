@@ -49,4 +49,9 @@
     <string name="sendForms">Enviar</string>
     <string name="txt_cancel">Cancelar</string>
     <string name="txt_clear">Limpar</string>
+    <string name="name_receive">Nome:</string>
+    <string name="lastname_receive">Sobrenome:</string>
+    <string name="tel_receive">Telefone:</string>
+    <string name="celular_receive">Celular:</string>
+    <string name="cpf_receive">CPF:</string>
 </resources>

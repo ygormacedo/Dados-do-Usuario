@@ -3,7 +3,158 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ReceiveActivity"
+    android:background="@color/zupColorBlue"
     >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/framelayout_border_forms"
+        android:padding="5dp"
+        android:layout_margin="@dimen/margin_default">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_pattern"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_name"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/name_receive"
+                android:textColor="@android:color/white"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_last_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_name"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_last_name"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/lastname_receive"
+                android:textColor="@android:color/white"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_tel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_last_name"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_tel"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_last_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/tel_receive"
+                android:textColor="@android:color/white"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_cel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_tel"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_cel"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_cel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_tel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/celular_receive"
+                android:textColor="@android:color/white"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_cpf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cel"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_cpf"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_cpf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/cpf_receive"
+                android:textColor="@android:color/white"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

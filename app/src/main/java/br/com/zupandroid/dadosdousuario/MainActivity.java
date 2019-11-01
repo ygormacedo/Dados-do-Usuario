@@ -1,9 +1,13 @@
 package br.com.zupandroid.dadosdousuario;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatSpinner;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,7 +16,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        spinnerCustom();
+        clickCustom();
+    }
 
+    private void clickCustom(){
+        AppCompatButton sendInformation = findViewById(R.id.btn_main_send);
+        AppCompatButton clearInformation = findViewById(R.id.btn_main_clear);
+
+        sendInformation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ReceiveActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+
+    private void spinnerCustom(){
         AppCompatSpinner spinnerStats = findViewById(R.id.spi_main_stats);
         ArrayAdapter<CharSequence> adapterStats = SpinnerAdapter.createFromResource(this,
                 R.array.estados_array, R.layout.spinner_item);
@@ -26,18 +48,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-
-
-//        AppCompatSpinner estadosDynamic = findViewById(R.id.spi_main_stats);
-//        ArrayAdapter<CharSequence> staticAdapter = ArrayAdapter
-//                .createFromResource(this, R.array.estados_array,
-//                        R.layout.);
-//        staticAdapter.setDropDownViewResource(R.layout.spinner_item);
-//        estadosDynamic.setAdapter(staticAdapter);
-//
-//        AppCompatSpinner schoolDinamic = findViewById(R.id.spi_main_school);
-//        staticAdapter = ArrayAdapter
-//                .createFromResource(this, R.array.escolaridade_array,
-//                        R.layout.support_simple_spinner_dropdown_item);
-//        staticAdapter.setDropDownViewResource(R.layout.spinner_item);
-//        schoolDinamic.setAdapter(staticAdapter);
