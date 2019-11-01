@@ -152,7 +152,129 @@
                 android:textColor="@android:color/white"
                 />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cpf"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/txt_escolaridade"
+                android:textColor="@android:color/white"
+                />
 
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_school"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cpf"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_school"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_zip_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_school"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/txt_endereco"
+                android:textColor="@android:color/white"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_zip_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_school"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_zip_code"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_neighborhood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_zip_code"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/txt_neighborhood"
+                android:textColor="@android:color/white"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_neighborhood"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_zip_code"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_neighborhood"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_neighborhood"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/txt_stats"
+                android:textColor="@android:color/white"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_stats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_neighborhood"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_stats"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enviar"
+                android:padding="@dimen/padding_default"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:textSize="@dimen/text_default"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:background="@drawable/button_custom"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_stats"
+                app:layout_constraintLeft_toLeftOf="@id/txt_pattern_stats"
+
+
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

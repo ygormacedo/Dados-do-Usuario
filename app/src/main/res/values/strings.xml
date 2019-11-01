@@ -54,4 +54,10 @@
     <string name="tel_receive">Telefone:</string>
     <string name="celular_receive">Celular:</string>
     <string name="cpf_receive">CPF:</string>
+    <string name="txt_escolaridade">Escolaridade:</string>
+    <string name="txt_endereco">Endereco:</string>
+    <string name="txt_neighborhood">Bairro:</string>
+    <string name="txt_stats">Estado:</string>
+    <string name="txt_password">Senha:</string>
+    <string name="enviar">Enviar</string>
 </resources>
