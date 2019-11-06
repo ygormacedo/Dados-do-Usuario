@@ -100,7 +100,7 @@
                 android:textColor="@android:color/white"
                 />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/txt_receive_cel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
