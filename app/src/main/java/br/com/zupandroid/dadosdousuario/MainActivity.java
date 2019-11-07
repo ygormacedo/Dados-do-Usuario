@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void clickListenner(){
+    private void clickListenner() {
         AppCompatButton btnSend = findViewById(R.id.btn_main_send);
         AppCompatButton btnClear = findViewById(R.id.btn_main_clear);
 
@@ -46,10 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
                 userDate mUser = new userDate();
 
-                if (mUser != null){
+                if (mUser != null) {
                     Toast.makeText(MainActivity.this, "Por favor, inseria os dados acima", Toast.LENGTH_LONG).show();
-                }
-                else {
+                } else {
                     mUser.setName(editNameMain.getText().toString());
                     mUser.setLastName(lastNameMain.getText().toString());
                     mUser.setTelephone(telephoneMain.getText().toString());
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void spinnerCustom(){
+    private void spinnerCustom() {
         AppCompatSpinner spinnerStats = findViewById(R.id.spi_main_stats);
         ArrayAdapter<CharSequence> adapterStats = SpinnerAdapter.createFromResource(this,
                 R.array.estados_array, R.layout.spinner_item);
