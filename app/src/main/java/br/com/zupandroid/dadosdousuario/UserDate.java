@@ -2,14 +2,14 @@ package br.com.zupandroid.dadosdousuario;
 
 import java.io.Serializable;
 
-public class userDate implements Serializable {
+public class UserDate implements Serializable {
 
     private String name, lastName, telephone, celphone, cpf, schooling, zipCode, neighborhood, stats;
 
-    public userDate() {
+    public UserDate() {
     }
 
-    public userDate(String name, String lastName, String telephone, String celphone, String cpf, String schooling, String zipcode, String neighborhood, String stats) {
+    public UserDate(String name, String lastName, String telephone, String celphone, String cpf, String schooling, String zipcode, String neighborhood, String stats) {
         this.name = name;
         this.lastName = lastName;
         this.telephone = telephone;

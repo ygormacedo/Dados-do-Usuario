@@ -4,15 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatSpinner;
-
-import com.github.rtoshiro.util.format.SimpleMaskFormatter;
-import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                userDate mUser = new userDate();
+                UserDate mUser = new UserDate();
                 mUser.setName(editNameMain.getText().toString());
                 mUser.setLastName(lastNameMain.getText().toString());
                 mUser.setTelephone(telephoneMain.getText().toString());
@@ -50,11 +45,12 @@ public class MainActivity extends AppCompatActivity {
                 mUser.setStats(statsMain.getSelectedItem().toString());
                 Intent intent = new Intent(MainActivity.this, ReceiveActivity.class);
                 intent.putExtra("name", mUser);
+//                emptyFields();
                 startActivity(intent);
             }
         });
 
-        validataFields();
+//        maskForNumbers();
 
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,20 +76,22 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void validataFields() {
+    // Mascaras que eu criei para o ultimo teste, favor desconsiderar!
 
-        SimpleMaskFormatter cpfMask = new SimpleMaskFormatter("NNN.NNN.NNN-NN");
-        MaskTextWatcher cpfMaskText = new MaskTextWatcher(cpfMain, cpfMask);
-        cpfMain.addTextChangedListener(cpfMaskText);
-
-        SimpleMaskFormatter telephoneMask = new SimpleMaskFormatter("(NN)NNNN-NNNN");
-        MaskTextWatcher telephoneMaskText = new MaskTextWatcher(telephoneMain,telephoneMask);
-        telephoneMain.addTextChangedListener(telephoneMaskText);
-
-        SimpleMaskFormatter celphoneMask = new SimpleMaskFormatter("(NN)NNNNN-NNNN");
-        MaskTextWatcher celphoneMaskText = new MaskTextWatcher(celphoneMain,celphoneMask);
-        celphoneMain.addTextChangedListener(celphoneMaskText);
-    }
+//    private void maskForNumbers() {
+//
+//        SimpleMaskFormatter cpfMask = new SimpleMaskFormatter("NNN.NNN.NNN-NN");
+//        MaskTextWatcher cpfMaskText = new MaskTextWatcher(cpfMain, cpfMask);
+//        cpfMain.addTextChangedListener(cpfMaskText);
+//
+//        SimpleMaskFormatter telephoneMask = new SimpleMaskFormatter("(NN)NNNN-NNNN");
+//        MaskTextWatcher telephoneMaskText = new MaskTextWatcher(telephoneMain,telephoneMask);
+//        telephoneMain.addTextChangedListener(telephoneMaskText);
+//
+//        SimpleMaskFormatter celphoneMask = new SimpleMaskFormatter("(NN)NNNNN-NNNN");
+//        MaskTextWatcher celphoneMaskText = new MaskTextWatcher(celphoneMain,celphoneMask);
+//        celphoneMain.addTextChangedListener(celphoneMaskText);
+//    }
 
     private void spinnerCustom() {
         AppCompatSpinner spinnerStats = findViewById(R.id.spi_main_stats);

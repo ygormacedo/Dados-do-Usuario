@@ -1,13 +1,9 @@
 package br.com.zupandroid.dadosdousuario;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.service.autofill.UserData;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatTextView;
 
 import java.util.Objects;
 
@@ -30,7 +26,7 @@ public class ReceiveActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-        userDate mNameUser = (userDate) Objects.requireNonNull(bundle).getSerializable("name");
+        UserDate mNameUser = (UserDate) Objects.requireNonNull(bundle).getSerializable("name");
 
         nameUSer.setText(Objects.requireNonNull(mNameUser).getName());
         lastNameUser.setText(mNameUser.getLastName());
