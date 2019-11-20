@@ -60,4 +60,5 @@
     <string name="txt_stats">Estado:</string>
     <string name="txt_password">Senha:</string>
     <string name="enviar">Enviar</string>
+    <string name="msgConfirm">Deseja enviar, os dados mencionados acima?</string>
 </resources>

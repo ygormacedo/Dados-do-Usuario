@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatSpinner;
+
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
@@ -25,17 +28,18 @@ public class MainActivity extends AppCompatActivity {
         spinnerCustom();
 
     }
+
     private void clickListenner() {
 
         AppCompatButton btnSend = findViewById(R.id.btn_main_send);
         final AppCompatButton btnClear = findViewById(R.id.btn_main_clear);
-
-
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 UserDate mUser = new UserDate();
+                boolean validator = useValidate();
+
                 mUser.setName(editNameMain.getText().toString());
                 mUser.setLastName(lastNameMain.getText().toString());
                 mUser.setTelephone(telephoneMain.getText().toString());
@@ -47,7 +51,13 @@ public class MainActivity extends AppCompatActivity {
                 mUser.setStats(statsMain.getSelectedItem().toString());
                 Intent intent = new Intent(MainActivity.this, ReceiveActivity.class);
                 intent.putExtra("name", mUser);
-                startActivity(intent);
+
+                if (validator) {
+                    startActivity(intent);
+                } else {
+                    clickListenner();
+                }
+
             }
         });
 
@@ -72,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
                         statsMain.setSelected(true);
                     }
                 });
-
             }
         });
+
     }
 
     private void validataFields() {
@@ -84,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
         cpfMain.addTextChangedListener(cpfMaskText);
 
         SimpleMaskFormatter telephoneMask = new SimpleMaskFormatter("(NN)NNNN-NNNN");
-        MaskTextWatcher telephoneMaskText = new MaskTextWatcher(telephoneMain,telephoneMask);
+        MaskTextWatcher telephoneMaskText = new MaskTextWatcher(telephoneMain, telephoneMask);
         telephoneMain.addTextChangedListener(telephoneMaskText);
 
         SimpleMaskFormatter celphoneMask = new SimpleMaskFormatter("(NN)NNNNN-NNNN");
-        MaskTextWatcher celphoneMaskText = new MaskTextWatcher(celphoneMain,celphoneMask);
+        MaskTextWatcher celphoneMaskText = new MaskTextWatcher(celphoneMain, celphoneMask);
         celphoneMain.addTextChangedListener(celphoneMaskText);
     }
 
@@ -105,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerSchool.setAdapter(adapterSchool);
     }
 
-    private void namesIds(){
+    private void namesIds() {
         editNameMain = findViewById(R.id.et_main_name);
         lastNameMain = findViewById(R.id.et_main_last_name);
         telephoneMain = findViewById(R.id.et_main_telephone);
@@ -115,5 +125,47 @@ public class MainActivity extends AppCompatActivity {
         zipCodeMain = findViewById(R.id.et_main_zipCode);
         neighborhoodMain = findViewById(R.id.et_main_neighborhood);
         statsMain = findViewById(R.id.spi_main_stats);
+    }
+
+    private MensagemError mensagemLog() {
+        MensagemError msgLog = new MensagemError();
+
+        msgLog.setLogName("O Campo nome é obrigatorio");
+        msgLog.setLogLastName("O Campo sobrenome é obrigatorio");
+       msgLog.setLogCelphone("O Campo Telefone é obrigatorio");
+
+       return msgLog;
+
+    }
+
+    public boolean useValidate() {
+        UserDate userDate = new UserDate();
+        MensagemError msgLog = mensagemLog();
+        userDate.setName(editNameMain.getText().toString());
+        userDate.setLastName(lastNameMain.getText().toString());
+        userDate.setTelephone(telephoneMain.getText().toString());
+        userDate.setCelphone(celphoneMain.getText().toString());
+        userDate.setCpf(cpfMain.getText().toString());
+        userDate.setSchooling(schoolingMain.getSelectedItem().toString());
+        userDate.setZipCode(zipCodeMain.getText().toString());
+        userDate.setNeighborhood(neighborhoodMain.getText().toString());
+        userDate.setStats(statsMain.getSelectedItem().toString());
+
+        boolean validator = false;
+        if (userDate.getName().length() == 0) {
+            Toast.makeText(MainActivity.this, msgLog.getLogName(), Toast.LENGTH_LONG).show();
+            validator = false;
+
+        }
+        else if (userDate.getLastName().length() == 0) {
+            userDate.setLastName(lastNameMain.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogLastName(), Toast.LENGTH_LONG).show();
+            validator = false;
+        } else if (userDate.getTelephone().length() == 0) {
+            userDate.setTelephone(telephoneMain.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogTelephone(), Toast.LENGTH_LONG).show();
+            validator = false;
+        }
+        return validator;
     }
 }
