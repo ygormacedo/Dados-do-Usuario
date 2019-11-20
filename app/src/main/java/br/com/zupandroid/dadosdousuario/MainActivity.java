@@ -1,22 +1,26 @@
 package br.com.zupandroid.dadosdousuario;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.core.widget.ContentLoadingProgressBar;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppCompatEditText editNameMain, lastNameMain, telephoneMain, celphoneMain, cpfMain, zipCodeMain, neighborhoodMain;
+    private AppCompatEditText editNameMain, lastNameMain, rgMain, telephoneMain,
+                              celphoneMain, cpfMain, zipCodeMain, neighborhoodMain, passwordOk, passwordConfirm;
     private AppCompatSpinner schoolingMain, statsMain;
 
     @Override
@@ -49,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 mUser.setZipCode(zipCodeMain.getText().toString());
                 mUser.setNeighborhood(neighborhoodMain.getText().toString());
                 mUser.setStats(statsMain.getSelectedItem().toString());
+                mUser.setPassword(passwordOk.getText().toString());
+                mUser.setRePassword(passwordConfirm.getText().toString());
+                mUser.setRg(rgMain.getText().toString());
                 Intent intent = new Intent(MainActivity.this, ReceiveActivity.class);
                 intent.putExtra("name", mUser);
 
@@ -80,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
                         zipCodeMain.getText().clear();
                         neighborhoodMain.getText().clear();
                         statsMain.setSelected(true);
+                        passwordConfirm.getText().clear();
+                        passwordOk.getText().clear();
+                        rgMain.getText().clear();
                     }
                 });
             }
@@ -100,6 +110,10 @@ public class MainActivity extends AppCompatActivity {
         SimpleMaskFormatter celphoneMask = new SimpleMaskFormatter("(NN)NNNNN-NNNN");
         MaskTextWatcher celphoneMaskText = new MaskTextWatcher(celphoneMain, celphoneMask);
         celphoneMain.addTextChangedListener(celphoneMaskText);
+
+        SimpleMaskFormatter rgMask = new SimpleMaskFormatter("NN.NNN.NNN-N");
+        MaskTextWatcher rgMaskText = new MaskTextWatcher(rgMain, rgMask);
+        rgMain.addTextChangedListener(rgMaskText);
     }
 
     private void spinnerCustom() {
@@ -125,17 +139,27 @@ public class MainActivity extends AppCompatActivity {
         zipCodeMain = findViewById(R.id.et_main_zipCode);
         neighborhoodMain = findViewById(R.id.et_main_neighborhood);
         statsMain = findViewById(R.id.spi_main_stats);
+        passwordOk = findViewById(R.id.et_main_password);
+        passwordConfirm = findViewById(R.id.et_main_confirm_password);
+        rgMain = findViewById(R.id.et_main_rg);
     }
 
     private MensagemError mensagemLog() {
+
         MensagemError msgLog = new MensagemError();
 
-        msgLog.setLogName("O Campo nome é obrigatorio");
-        msgLog.setLogLastName("O Campo sobrenome é obrigatorio");
-       msgLog.setLogCelphone("O Campo Telefone é obrigatorio");
+        msgLog.setLogName("O campo Nome é obrigatorio");
+        msgLog.setLogLastName("O campo Sobrenome é obrigatorio");
+        msgLog.setLogCelphone("O campo Celular é obrigatorio");
+        msgLog.setLogTelephone("O campo Tefone é obrigatorio ");
+        msgLog.setLogCpf("O campo CPF é obrigatorio");
+        msgLog.setLogNeighborhood("O campo Bairro é obrigatorio");
+        msgLog.setLogZipCod("O campo Endereço é obrigatorio");
+        msgLog.setLogPassword("O Campo senha é obrigatorio");
+        msgLog.setLogRePassword("O Campo de confirmação da senha é obrigatorio");
+        msgLog.setLogRg("O campo RG é obrigatorio");
 
-       return msgLog;
-
+        return msgLog;
     }
 
     public boolean useValidate() {
@@ -149,15 +173,19 @@ public class MainActivity extends AppCompatActivity {
         userDate.setSchooling(schoolingMain.getSelectedItem().toString());
         userDate.setZipCode(zipCodeMain.getText().toString());
         userDate.setNeighborhood(neighborhoodMain.getText().toString());
+        userDate.setPassword(passwordOk.getText().toString());
+        userDate.setRePassword(passwordConfirm.getText().toString());
         userDate.setStats(statsMain.getSelectedItem().toString());
-
-        boolean validator = false;
+        userDate.setRg(rgMain.getText().toString());
+        boolean validator = true;
         if (userDate.getName().length() == 0) {
             Toast.makeText(MainActivity.this, msgLog.getLogName(), Toast.LENGTH_LONG).show();
             validator = false;
-
-        }
-        else if (userDate.getLastName().length() == 0) {
+        } else if (userDate.getRg().length() == 0) {
+            userDate.setRg(rgMain.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogRg(), Toast.LENGTH_LONG).show();
+            validator = false;
+        } else if (userDate.getLastName().length() == 0) {
             userDate.setLastName(lastNameMain.getText().toString());
             Toast.makeText(MainActivity.this, msgLog.getLogLastName(), Toast.LENGTH_LONG).show();
             validator = false;
@@ -165,6 +193,35 @@ public class MainActivity extends AppCompatActivity {
             userDate.setTelephone(telephoneMain.getText().toString());
             Toast.makeText(MainActivity.this, msgLog.getLogTelephone(), Toast.LENGTH_LONG).show();
             validator = false;
+        } else if (userDate.getCelphone().length() == 0) {
+            userDate.setCelphone(celphoneMain.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogCelphone(), Toast.LENGTH_LONG).show();
+            validator = false;
+        } else if (userDate.getCpf().length() == 0) {
+            userDate.setCpf(cpfMain.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogCpf(), Toast.LENGTH_LONG).show();
+            validator = false;
+
+        } else if (userDate.getNeighborhood().length() == 0) {
+            userDate.setNeighborhood(neighborhoodMain.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogNeighborhood(), Toast.LENGTH_LONG).show();
+            validator = false;
+
+        } else if (userDate.getZipCode().length() == 0) {
+            userDate.setZipCode(zipCodeMain.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogZipCod(), Toast.LENGTH_LONG).show();
+            validator = false;
+
+        } else if (userDate.getPassword().length() == 0) {
+            userDate.setPassword(passwordOk.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogPassword(), Toast.LENGTH_LONG).show();
+            validator = false;
+
+        } else if (userDate.getRePassword().length() == 0) {
+            userDate.setRePassword(passwordConfirm.getText().toString());
+            Toast.makeText(MainActivity.this, msgLog.getLogRePassword(), Toast.LENGTH_LONG).show();
+            validator = false;
+
         }
         return validator;
     }

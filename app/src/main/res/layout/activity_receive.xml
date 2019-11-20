@@ -12,9 +12,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_default"
         android:background="@drawable/framelayout_border_forms"
         android:padding="5dp"
-        android:layout_margin="@dimen/margin_default"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="69dp"
         >
 
 
@@ -28,13 +30,13 @@
                 android:id="@+id/txt_receive_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_name"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -43,24 +45,24 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/name_receive"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_receive_last_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_name"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_last_name"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_last_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_name"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -69,24 +71,24 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_name"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/lastname_receive"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_name"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_receive_tel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_last_name"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_tel"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_tel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_last_name"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -95,24 +97,24 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_last_name"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/tel_receive"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_last_name"
                 />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/txt_receive_cel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_tel"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_cel"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_cel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_tel"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -121,24 +123,24 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_tel"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/celular_receive"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_tel"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_receive_cpf"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cel"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_cpf"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_cpf"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cel"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -147,12 +149,39 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cel"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/cpf_receive"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cel"
                 />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pattern_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:text="@string/RG_say"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cpf"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_receive_rg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_rg"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cpf"
+                />
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_pattern_school"
@@ -160,25 +189,26 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cpf"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/txt_escolaridade"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_pattern_rg"
                 />
-
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_receive_school"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_cpf"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_school"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="17.5sp"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_rg"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_school"
+                app:layout_constraintRight_toRightOf="parent"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -187,11 +217,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_school"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/txt_endereco"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_school"
                 />
 
 
@@ -199,13 +229,13 @@
                 android:id="@+id/txt_receive_zip_code"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_school"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_zip_code"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_zip_code"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_school"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -214,11 +244,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_zip_code"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/txt_neighborhood"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_zip_code"
                 />
 
 
@@ -226,13 +256,13 @@
                 android:id="@+id/txt_receive_neighborhood"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_zip_code"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_neighborhood"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_neighborhood"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_zip_code"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -241,24 +271,24 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
                 android:padding="@dimen/padding_default"
-                android:textSize="@dimen/text_default"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_neighborhood"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="@string/txt_stats"
                 android:textColor="@android:color/white"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_neighborhood"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_receive_stats"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/txt_pattern_neighborhood"
-                app:layout_constraintLeft_toRightOf="@id/txt_pattern_stats"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_margin="@dimen/margin_default"
-                android:textSize="@dimen/text_default"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/zupColorGreen"
+                android:textSize="@dimen/text_default"
+                app:layout_constraintLeft_toRightOf="@id/txt_pattern_stats"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_pattern_neighborhood"
                 />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -266,10 +296,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default"
-                app:srcCompat="@drawable/ic_check_circle_outline_24px"
-                app:layout_constraintTop_toBottomOf="@id/txt_receive_neighborhood"
-                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_receive_neighborhood"
+                app:srcCompat="@drawable/ic_check_circle_outline_24px"
 
                 />
 

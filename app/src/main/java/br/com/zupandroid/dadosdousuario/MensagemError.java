@@ -1,9 +1,41 @@
 package br.com.zupandroid.dadosdousuario;
 
 public class MensagemError {
-    public String logName, logLastName, logTelephone, logCelphone, logCpf, logSchool, logNeighborhood, logStats;
+    public String logName, logLastName, logTelephone, logCelphone, logRg, logCpf, logPassword, logRePassword, logNeighborhood, logZipCod;
 
     public MensagemError() {
+    }
+
+    public String getLogRg() {
+        return logRg;
+    }
+
+    public void setLogRg(String logRg) {
+        this.logRg = logRg;
+    }
+
+    public String getLogPassword() {
+        return logPassword;
+    }
+
+    public void setLogPassword(String logPassword) {
+        this.logPassword = logPassword;
+    }
+
+    public String getLogRePassword() {
+        return logRePassword;
+    }
+
+    public void setLogRePassword(String logRePassword) {
+        this.logRePassword = logRePassword;
+    }
+
+    public String getLogZipCod() {
+        return logZipCod;
+    }
+
+    public void setLogZipCod(String logZipCod) {
+        this.logZipCod = logZipCod;
     }
 
     public String getLogName() {
@@ -46,14 +78,6 @@ public class MensagemError {
         this.logCpf = logCpf;
     }
 
-    public String getLogSchool() {
-        return logSchool;
-    }
-
-    public void setLogSchool(String logSchool) {
-        this.logSchool = logSchool;
-    }
-
     public String getLogNeighborhood() {
         return logNeighborhood;
     }
@@ -62,11 +86,4 @@ public class MensagemError {
         this.logNeighborhood = logNeighborhood;
     }
 
-    public String getLogStats() {
-        return logStats;
-    }
-
-    public void setLogStats(String logStats) {
-        this.logStats = logStats;
-    }
 }

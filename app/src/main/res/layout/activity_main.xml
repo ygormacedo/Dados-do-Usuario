@@ -24,6 +24,16 @@
             app:layout_constraintTop_toTopOf="parent"
             />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ib_main_zup"
+            app:layout_constraintBottom_toTopOf="@id/et_main_name"
+            android:layout_margin="@dimen/margin_default"
+            android:src="@drawable/ic_arrow_back_24px"
+            />
+
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_main_name"
             android:layout_width="match_parent"
@@ -103,6 +113,23 @@
             android:textColor="@android:color/white"
             android:paddingStart="@dimen/padding_default"
             android:paddingEnd="@dimen/padding_default"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_main_rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_default"
+            app:layout_constraintTop_toBottomOf="@id/et_main_cpf"
+            android:layout_margin="@dimen/margin_default"
+            android:background="@drawable/button_custom"
+            android:hint="@string/rg_say"
+            android:inputType="number"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            android:textSize="@dimen/text_default"
+
             />
 
 
@@ -213,11 +240,13 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_default"
             android:layout_margin="@dimen/margin_default"
-            app:layout_constraintTop_toBottomOf="@id/et_main_cpf"
+            app:layout_constraintTop_toBottomOf="@id/et_main_rg"
             android:background="@drawable/button_custom"
             android:paddingStart="@dimen/padding_default"
             android:paddingEnd="@dimen/padding_default"
             />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

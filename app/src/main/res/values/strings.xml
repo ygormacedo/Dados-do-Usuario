@@ -61,4 +61,6 @@
     <string name="txt_password">Senha:</string>
     <string name="enviar">Enviar</string>
     <string name="msgConfirm">Deseja enviar, os dados mencionados acima?</string>
+    <string name="rg_say">Digite o seu RG</string>
+    <string name="RG_say">RG:</string>
 </resources>

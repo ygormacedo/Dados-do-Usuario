@@ -54,6 +54,7 @@ public class ReceiveActivity extends AppCompatActivity {
         TextView zipCodeUser = findViewById(R.id.txt_receive_zip_code);
         TextView neighborhoodUser = findViewById(R.id.txt_receive_neighborhood);
         TextView statsUser = findViewById(R.id.txt_receive_stats);
+        TextView rgUser = findViewById(R.id.txt_receive_rg);
 
         Bundle bundle = getIntent().getExtras();
         UserDate mNameUser = (UserDate) Objects.requireNonNull(bundle).getSerializable("name");
@@ -66,5 +67,6 @@ public class ReceiveActivity extends AppCompatActivity {
         zipCodeUser.setText(mNameUser.getZipCode());
         neighborhoodUser.setText(mNameUser.getNeighborhood());
         statsUser.setText(mNameUser.getStats());
+        rgUser.setText(mNameUser.getRg());
     }
 }

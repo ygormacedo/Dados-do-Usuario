@@ -4,21 +4,41 @@ import java.io.Serializable;
 
 public class UserDate implements Serializable {
 
-    private String name, lastName, telephone, celphone, cpf, schooling, zipCode, neighborhood, stats;
+    private String name, lastName, telephone, celphone, cpf, schooling, zipCode, neighborhood, stats, rePassword, rg, password;
+
 
     public UserDate() {
     }
 
-    public UserDate(String name, String lastName, String telephone, String celphone, String cpf, String schooling, String zipcode, String neighborhood, String stats) {
+    public UserDate(String name, String lastName, String telephone, String celphone, String cpf, String schooling, String zipCode, String neighborhood, String stats, String rePassword, String rg, String password) {
         this.name = name;
         this.lastName = lastName;
         this.telephone = telephone;
         this.celphone = celphone;
         this.cpf = cpf;
         this.schooling = schooling;
-        this.zipCode = zipcode;
+        this.zipCode = zipCode;
         this.neighborhood = neighborhood;
         this.stats = stats;
+        this.rePassword = rePassword;
+        this.rg = rg;
+        this.password = password;
+    }
+
+    public String getRePassword() {
+        return rePassword;
+    }
+
+    public void setRePassword(String rePassword) {
+        this.rePassword = rePassword;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getName() {
@@ -91,5 +111,13 @@ public class UserDate implements Serializable {
 
     public void setStats(String stats) {
         this.stats = stats;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
     }
 }
