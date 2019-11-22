@@ -1,12 +1,15 @@
 package br.com.zupandroid.dadosdousuario;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerCustom();
 
     }
+
 
     private void clickListenner() {
 
@@ -95,6 +99,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Você realmente deseja sair?");
+        alert.setCancelable(false)
+                .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        AlertDialog alertDialog = alert.create();
+        alertDialog.show();
     }
 
     private void validataFields() {
